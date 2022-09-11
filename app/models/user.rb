@@ -6,4 +6,6 @@ class User < ApplicationRecord
   
   # Add a validation for the username
   validates :username, presence: true, uniqueness: true
+
+  has_many :discussions, dependent: :destroy
 end
